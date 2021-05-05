@@ -1,0 +1,2 @@
+INSERT INTO usuarios (dni,nombre,apellido,celular,correo,contra,rango,habilitado) VALUES('72630798','Stefano','Tamayo','922255461','stefano.6939@gmail.com','1020304050','Administrador','1')
+INSERT INTO productos (id,nombre,precio,descuento,categoria,habilitado) VALUES(NULL,'1/4 de Pollo',10,25,'Pollos','1')

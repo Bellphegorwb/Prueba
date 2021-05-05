@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Listar Usuarios</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/all.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/css/estilo.css}" />
+<script type="text/javascript" th:src="@{/js/jquery-3.5.1.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/bootstrap.bundle.min.js}"></script>
+</head>
+<body>
+
+<div class="container">
+	<div class="text-center"><br><h3>Lista de Usuarios Registrados</h3><br><br></div>
+	<table class="table table-dark round_table" >
+		<thead>
+			<tr>
+				<th scope="col">DNI</th>
+				<th scope="col">Nombres</th>
+				<th scope="col">Apellidos</th>
+				<th scope="col">Celular</th>
+				<th scope="col">Correo</th>
+				<th scope="col">Contraseña</th>
+				<th scope="col">Rango</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="item:${usuarios}">
+				<td th:if="${item.habilitado.equals('1')}" th:text="${item.dni}"></td>
+				<td th:if="${item.habilitado.equals('1')}" th:text="${item.nombre}"></td>
+				<td th:if="${item.habilitado.equals('1')}" th:text="${item.apellido}"></td>
+				<td th:if="${item.habilitado.equals('1')}" th:text="${item.celular}"></td>
+				<td th:if="${item.habilitado.equals('1')}" th:text="${item.correo}"></td>
+				<td th:if="${item.habilitado.equals('1')}" th:text="${item.contra}"></td>
+				<td th:if="${item.habilitado.equals('1')}" th:text="${item.rango}"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-12 text-center">
+			<a th:href="@{/usuarios/registrar}"><button type="button" class="btn btn-primary mr-3"><i class="fas fa-user-plus"></i> Nuevo Usuario</button></a>
+			
+			<a th:href="@{/usuarios/modificar}"><button type="button" class="btn btn-primary mr-3"><i class="fas fa-user-edit"></i> Modificar Usuario</button></a>
+			<a th:href="@{/usuarios/eliminar}"><button type="button" class="btn btn-primary mr-3"><i class="fas fa-user-slash"></i> Eliminar Usuario</button></a>
+		</div>
+	</div>
+	<div class="row pt-3">
+		<a th:href="@{/menu}"><button type="button" class="btn btn-secondary"><i class="fas fa-caret-square-left"></i> Regresar</button></a>
+	</div>
+</div>
+</body>
+</html>

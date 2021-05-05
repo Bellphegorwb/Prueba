@@ -1,0 +1,39 @@
+.cuadro {
+	max-width: 450px;
+	background-color: rgba(255, 255, 255, 0);
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
+	border-radius: 5%;
+	box-shadow: 0px 0px 50px black;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+body {
+	background-image: url(imagenes/fondo.jpg);
+	height: 720px;
+	background-position: center;
+	background-size: cover;
+	color: white;
+}
+
+.texto {
+	color: white;
+}
+
+.transparente {
+	background-color: rgba(255, 255, 255, 0);
+}
+
+.round_table {
+	border-radius: 20px;
+}
+
+.sololinea{
+	border-color: transparent; 
+	border-bottom-color: gray; 
+	background-color: transparent; 
+	color:white;
+}
